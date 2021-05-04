@@ -1,0 +1,17 @@
+{
+    "menu":{
+        "login": "Zaloguj się",
+        "register": "Zarejestuj się",
+        "profile": "Profil"
+    },
+    "forms": {
+        "register": "Zarejestruj się",
+        "login": "Zaloguj się",
+        "name": "Nazwa",
+        "regHintName": "Co najmniej 3 znaki",
+        "mail": "E-mail",
+        "regHintMail": "Wpisz poprawny e-mail",
+        "password": "Hasło",
+        "regHintPassword": "Co najmniej 3 znaków"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "menu":{
+        "login": "Log in",
+        "register": "Sign up",
+        "profile": "Profile"
+    },
+    "forms": {
+        "register": "Log in",
+        "login": "Sign up",
+        "name": "Name",
+        "regHintName": "At least 3 char",
+        "mail": "E-mail",
+        "regHintMail": "Type correct e-mail",
+        "password": "Password",
+        "regHintPassword": "At least 8 char"
+    }
+}

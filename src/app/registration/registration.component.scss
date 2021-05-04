@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(37, 37, 37);
+    .form-container {
+        width: auto;
+        background: white;
+        width: 300px;
+        padding: 40px;
+
+        p{
+            width: 100%;
+    
+            .mat-form-field{
+                width: 100%;
+            }
+        }
+
+        .form-buttons{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

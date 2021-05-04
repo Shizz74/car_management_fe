@@ -10,6 +10,8 @@ import { environment } from '../../environments/environment'
 })
 export class RegistrationComponent implements OnInit {
 
+  hide = true;
+
   registrationForm = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(255)]],
     email: ['', [Validators.required, Validators.email, Validators.maxLength(255)]],

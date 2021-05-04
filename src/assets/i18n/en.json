@@ -5,8 +5,8 @@
         "profile": "Profile"
     },
     "forms": {
-        "register": "Log in",
-        "login": "Sign up",
+        "register": "Sign up",
+        "login": "Log in",
         "name": "Name",
         "regHintName": "At least 3 char",
         "mail": "E-mail",

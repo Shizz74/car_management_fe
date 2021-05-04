@@ -18,6 +18,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { UserPageComponent } from './user-page/user-page.component';
+import { FooterComponent } from './footer/footer.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -30,7 +31,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomePageComponent,
     LoginComponent,
     RegistrationComponent,
-    UserPageComponent
+    UserPageComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment'
+import { first } from 'rxjs/operators';
+
+import { AccountAuthService } from '../_service/account-auth.service'
 
 @Component({
   selector: 'app-registration',
@@ -19,20 +21,22 @@ export class RegistrationComponent implements OnInit {
   });
 
   constructor(
-    private http: HttpClient,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private accountAuthService: AccountAuthService
   ) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(){
-    
-      this.http.post(environment.apiUrl + '/user/register', this.registrationForm.value)
-      .subscribe((response)=>{
-        console.log('repsonse ',response);
-      })
-    
-  }
+    this.accountAuthService.register(this.registrationForm.value)
+    .pipe(first())
+    .subscribe(
+        data => {
 
+        },
+        error => {
+
+        });
+  }
 }

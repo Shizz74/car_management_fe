@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 
 
-import { AccountAuthService } from '../_service/account-auth.service'
+import { AccountAuthService } from '../../_service/account-auth.service'
 
 @Component({
   selector: 'app-registration',

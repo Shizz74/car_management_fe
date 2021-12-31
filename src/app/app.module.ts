@@ -14,12 +14,12 @@ import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
-import { ProfileComponent } from './profile/profile.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { LoginComponent } from './login/login.component';
-import { RegistrationComponent } from './registration/registration.component';
-import { UserPageComponent } from './user-page/user-page.component';
-import { FooterComponent } from './footer/footer.component';
+import { ProfileComponent } from './_components/profile/profile.component';
+import { HomePageComponent } from './_components/home-page/home-page.component';
+import { LoginComponent } from './_components/login/login.component';
+import { RegistrationComponent } from './_components/registration/registration.component';
+import { UserPageComponent } from './_components/user-page/user-page.component';
+import { FooterComponent } from './_components/footer/footer.component';
 import { AlertComponent } from './_components/alert/alert.component';
 
 export function HttpLoaderFactory(http: HttpClient) {

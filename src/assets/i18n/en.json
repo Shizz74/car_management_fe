@@ -13,5 +13,8 @@
         "regHintMail": "Type correct e-mail",
         "password": "Password",
         "regHintPassword": "At least 8 char"
+    },
+    "buttons": {
+        "backToHome": "Back to home page"
     }
 }

@@ -13,5 +13,8 @@
         "regHintMail": "Wpisz poprawny e-mail",
         "password": "Hasło",
         "regHintPassword": "Co najmniej 8 znaków"
+    },
+    "buttons": {
+        "backToHome": "Powrót do strony głównej"
     }
 }

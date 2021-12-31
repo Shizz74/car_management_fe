@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 
 
@@ -17,12 +18,14 @@ export class RegistrationComponent implements OnInit {
   registrationForm = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(255)]],
     email: ['', [Validators.required, Validators.email, Validators.maxLength(255)]],
-    password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(255)]]
+    password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(255)]],
+    role: ['standard']
   });
 
   constructor(
     private fb: FormBuilder,
-    private accountAuthService: AccountAuthService
+    private accountAuthService: AccountAuthService,
+    private route:Router
   ) { }
 
   ngOnInit(): void {
@@ -33,7 +36,8 @@ export class RegistrationComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-
+          this.registrationForm.reset();
+          this.route.navigate(['/']);
         },
         error => {
 

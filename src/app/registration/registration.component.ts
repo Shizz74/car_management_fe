@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { first } from 'rxjs/operators';
+
 
 import { AccountAuthService } from '../_service/account-auth.service'
 
@@ -28,10 +28,10 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(){
+  onSubmit() {
     this.accountAuthService.register(this.registrationForm.value)
-    .pipe(first())
-    .subscribe(
+      .pipe(first())
+      .subscribe(
         data => {
 
         },

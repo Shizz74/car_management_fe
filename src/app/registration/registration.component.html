@@ -1,5 +1,8 @@
 <div class="container">
   <div class="form-container">
+    <a  routerLink="/" class="back-arrow" matTooltip="{{ 'menu.login' | translate }}">
+      <mat-icon matSuffix>keyboard_backspace</mat-icon>
+    </a>
     <h3>{{ 'forms.register' | translate }}</h3>
     <form class="form form--register" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
       <p>

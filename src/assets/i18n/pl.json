@@ -12,6 +12,6 @@
         "mail": "E-mail",
         "regHintMail": "Wpisz poprawny e-mail",
         "password": "Hasło",
-        "regHintPassword": "Co najmniej 3 znaków"
+        "regHintPassword": "Co najmniej 8 znaków"
     }
 }

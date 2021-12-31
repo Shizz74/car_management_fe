@@ -5,6 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -44,6 +45,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatInputModule,
     MatIconModule,
     MatButtonModule,
+    MatTooltipModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,

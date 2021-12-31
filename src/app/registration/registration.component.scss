@@ -6,11 +6,35 @@
     height: 100vh;
     overflow: hidden;
     background: rgb(37, 37, 37);
+
     .form-container {
         width: auto;
         background: white;
         width: 300px;
         padding: 40px;
+        position: relative;
+
+        a{
+            text-decoration: none;
+        }
+
+        .back-arrow {
+            display: flex;
+            align-items: center;
+            border: 2px solid black;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+
+            &:hover {
+                background: black;
+
+                mat-icon {
+                    color: white;
+                }
+            }
+        }
 
         p{
             width: 100%;

@@ -20,6 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { FooterComponent } from './footer/footer.component';
+import { AlertComponent } from './_components/alert/alert.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -33,7 +34,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     LoginComponent,
     RegistrationComponent,
     UserPageComponent,
-    FooterComponent
+    FooterComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,

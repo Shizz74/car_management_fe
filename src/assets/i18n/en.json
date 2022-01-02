@@ -16,5 +16,18 @@
     },
     "buttons": {
         "backToHome": "Back to home page"
+    },
+    "alerts": {
+        "name_is_empty": "The name must not be empty.",
+        "name_to_short": "The name should contain at least 3 characters.",
+        "name_to_long": "The name should contain a maximum of 255 characters.",
+        "name_wrong_char": "The name should only consist of letters and numbers.",
+        "email_is_empty": "The email must not be empty.",
+        "email_to_short": "The email should contain at least 6 characters.",
+        "email_to_long": "Email should contain a maximum of 255 characters.",
+        "email_wrong": "Invalid email",
+        "password_is_empty": "The password must not be empty.",
+        "password_to_short": "The password should contain at least 6 characters.",
+        "password_to_long": "The password should contain a maximum of 255 characters."
     }
 }

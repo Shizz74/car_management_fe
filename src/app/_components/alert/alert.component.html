@@ -1,1 +1,8 @@
-<p>alert works!</p>
+<div class="center">
+    <div *ngFor="let alert of alerts" class="{{cssClass(alert)}}">
+        <span [innerHTML]="alert.message"></span>
+        <a class="close" (click)="removeAlert(alert)">
+            <mat-icon matSuffix>highlight_off</mat-icon>
+        </a>
+    </div>
+</div>

@@ -3,6 +3,8 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 
+import { AlertService } from '../../_service/alert.service';
+
 
 import { AccountAuthService } from '../../_service/account-auth.service'
 
@@ -25,7 +27,8 @@ export class RegistrationComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private accountAuthService: AccountAuthService,
-    private route:Router
+    private route:Router,
+    private alertService: AlertService
   ) { }
 
   ngOnInit(): void {
@@ -40,7 +43,7 @@ export class RegistrationComponent implements OnInit {
           this.route.navigate(['/']);
         },
         error => {
-
+          this.alertService.error(error.error);
         });
   }
 }

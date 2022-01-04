@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-login-regis">
   <div class="form-container">
     <a  routerLink="/" mat-mini-fab class="back-arrow" matTooltip="{{ 'buttons.backToHome' | translate }}">
       <mat-icon matSuffix>keyboard_backspace</mat-icon>
@@ -25,7 +25,7 @@
         <mat-form-field appearance="outline">
           <mat-label>{{ 'forms.password' | translate }}</mat-label>
           <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
-            <mat-icon matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            <mat-icon matSuffix class="hide-icon" (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
           <mat-hint>{{ 'forms.regHintPassword' | translate }}</mat-hint>
         </mat-form-field>
       </p>

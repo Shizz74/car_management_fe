@@ -38,7 +38,7 @@ export class RegistrationComponent implements OnInit {
     this.accountAuthService.register(this.registrationForm.value)
       .pipe(first())
       .subscribe(
-        data => {
+        res => {
           this.registrationForm.reset();
           this.route.navigate(['/']);
         },

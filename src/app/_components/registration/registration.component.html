@@ -3,7 +3,7 @@
     <a  routerLink="/" mat-mini-fab class="back-arrow" matTooltip="{{ 'buttons.backToHome' | translate }}">
       <mat-icon matSuffix>keyboard_backspace</mat-icon>
     </a>
-    <h3>{{ 'forms.register' | translate }}</h3>
+    <h1>{{ 'forms.register' | translate }}</h1>
     <form class="form form--register" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
       <p>
         <mat-form-field appearance="outline">
@@ -30,7 +30,7 @@
         </mat-form-field>
       </p>
       <div class="form-buttons">
-        <button mat-raised-button color="success" type="submit" [disabled]="!registrationForm.valid">{{ 'forms.register' | translate }}</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!registrationForm.valid">{{ 'forms.register' | translate }}</button>
         <a routerLink="/login"><button type="button" mat-raised-button>{{ 'forms.login' | translate }}</button></a>
       </div>
     </form>

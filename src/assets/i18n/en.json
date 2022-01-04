@@ -22,10 +22,12 @@
         "name_to_short": "The name should contain at least 3 characters.",
         "name_to_long": "The name should contain a maximum of 255 characters.",
         "name_wrong_char": "The name should only consist of letters and numbers.",
+        "name_exist": "The specified name is taken.",
         "email_is_empty": "The email must not be empty.",
         "email_to_short": "The email should contain at least 6 characters.",
         "email_to_long": "Email should contain a maximum of 255 characters.",
         "email_wrong": "Invalid email",
+        "email_exist": "The specified email is already in use.",
         "password_is_empty": "The password must not be empty.",
         "password_to_short": "The password should contain at least 6 characters.",
         "password_to_long": "The password should contain a maximum of 255 characters."

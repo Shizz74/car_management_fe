@@ -19,15 +19,17 @@
     },
     "alerts": {
         "name_is_empty": "Nazwa nie może być pusta.",
-        "name_to_short": "Nazwa powinna zawierać co najmniej 3 znaki.",
-        "name_to_long": "Nazwa powinna zawierać maksymalnie 255 znaków.",
+        "name_too_short": "Nazwa powinna zawierać co najmniej 3 znaki.",
+        "name_too_long": "Nazwa powinna zawierać maksymalnie 255 znaków.",
         "name_wrong_char": "Nazwa powinna składać się tylko z liter i cyfr.",
+        "name_exist": "Podana nazwa jest zajęta.",
         "email_is_empty": "Email nie może być pusty.",
-        "email_to_short": "Email powinien zawierać co najmniej 6 znaki.",
-        "email_to_long": "Email powinien zawierać maksymalnie 255 znaków.",
+        "email_too_short": "Email powinien zawierać co najmniej 6 znaki.",
+        "email_too_long": "Email powinien zawierać maksymalnie 255 znaków.",
         "email_wrong": "Nieprawidłowy email",
+        "email_exist": "Podany email jest juz używany.",
         "password_is_empty": "Hasło nie może być puste.",
-        "password_to_short": "Hasło powinno zawierać co najmniej 6 znaki.",
-        "password_to_long": "Hasło powinno zawierać maksymalnie 255 znaków."
+        "password_too_short": "Hasło powinno zawierać co najmniej 6 znaki.",
+        "password_too_long": "Hasło powinno zawierać maksymalnie 255 znaków."
     }
 }

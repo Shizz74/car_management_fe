@@ -31,6 +31,10 @@ export class AccountAuthService {
     return this.http.post(`${environment.apiUrl}/user/register`, user);
   }
 
+  vehicle(){
+      return this.http.get(`${environment.apiUrl}/vehicle`);
+  }
+
   login(user: User) {
     return this.http.post<User>(`${environment.apiUrl}/user/login`, user)
     .pipe(

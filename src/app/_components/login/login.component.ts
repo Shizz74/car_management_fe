@@ -29,6 +29,18 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  pobierz() {
+    this.accountAuthService.vehicle()
+    .subscribe(
+      res => {
+        console.log(res);
+      },
+      error => {
+        console.log(error);
+      } 
+    )
+  }
+
   onSubmit() {
     this.alertService.clear();
 

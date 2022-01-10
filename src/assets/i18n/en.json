@@ -28,8 +28,12 @@
         "email_to_long": "Email should contain a maximum of 255 characters.",
         "email_wrong": "Invalid email",
         "email_exist": "The specified email is already in use.",
+        "email_do_not_exist": "Wrong email",
         "password_is_empty": "The password must not be empty.",
         "password_to_short": "The password should contain at least 6 characters.",
-        "password_to_long": "The password should contain a maximum of 255 characters."
+        "password_to_long": "The password should contain a maximum of 255 characters.",
+        "invalid_password": "Wrong password",
+        "register": "Sign up!",
+        "login": "Log in!"
     }
 }

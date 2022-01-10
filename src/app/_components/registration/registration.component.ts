@@ -39,11 +39,12 @@ export class RegistrationComponent implements OnInit {
       .pipe(first())
       .subscribe(
         res => {
+          this.alertService.success('register');
           this.registrationForm.reset();
           this.route.navigate(['/']);
         },
         error => {
-          this.alertService.error(error.error);
+          this.alertService.error(error);
         });
   }
 }

@@ -14,6 +14,8 @@ export class AccountAuthService {
 
   private userSubject: BehaviorSubject<User>;
   public user: Observable<User>;
+  private _isLoggedIn$ = new BehaviorSubject<boolean>(false);
+  isLoggedIn$ = this._isLoggedIn$.asObservable();
 
   constructor(
     private router: Router,
@@ -21,6 +23,11 @@ export class AccountAuthService {
   ) { 
     this.userSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('user')));
     this.user = this.userSubject.asObservable();
+    const userLocalStorage = JSON.parse(localStorage.getItem('user'));
+    const token = userLocalStorage.authToken;
+
+    console.log(token);
+    this._isLoggedIn$.next(!!token);
   }
 
   public get userValue(): User {
@@ -31,14 +38,11 @@ export class AccountAuthService {
     return this.http.post(`${environment.apiUrl}/user/register`, user);
   }
 
-  vehicle(){
-      return this.http.get(`${environment.apiUrl}/vehicle`);
-  }
-
   login(user: User) {
     return this.http.post<User>(`${environment.apiUrl}/user/login`, user)
     .pipe(
       map(user => {
+      this._isLoggedIn$.next(true);
       localStorage.setItem('user', JSON.stringify(user));
       this.userSubject.next(user);
       return user;
@@ -48,6 +52,7 @@ export class AccountAuthService {
   logout() {
     localStorage.removeItem('user');
     this.userSubject.next(null);
+    this._isLoggedIn$.next(false);
     this.router.navigate(['/']);
   }
 }

@@ -29,18 +29,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  pobierz() {
-    this.accountAuthService.vehicle()
-    .subscribe(
-      res => {
-        console.log(res);
-      },
-      error => {
-        console.log(error);
-      } 
-    )
-  }
-
   onSubmit() {
     this.alertService.clear();
 
@@ -48,10 +36,11 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         res => {
+          this.alertService.success('login')
           this.route.navigate(['/registration']);
         },
         error => {
-          this.alertService.error(error.error);
+          this.alertService.error(error);
         });
   }
 

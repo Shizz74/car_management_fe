@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatMenuModule } from '@angular/material/menu'
 
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -23,7 +24,8 @@ import { FooterComponent } from './_components/footer/footer.component';
 import { AlertComponent } from './_components/alert/alert.component';
 
 import { JwtInterceptor } from './_helpers/jwt.interceptor'
-import { ErrorInterceptor } from './_helpers/error.intercepotr'
+import { ErrorInterceptor } from './_helpers/error.intercepotr';
+import { MainNavigationComponent } from './_components/main-navigation/main-navigation.component'
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -38,7 +40,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     RegistrationComponent,
     UserPageComponent,
     FooterComponent,
-    AlertComponent
+    AlertComponent,
+    MainNavigationComponent
   ],
   imports: [
     BrowserModule,
@@ -51,6 +54,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatIconModule,
     MatButtonModule,
     MatTooltipModule,
+    MatMenuModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

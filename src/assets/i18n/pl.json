@@ -28,8 +28,13 @@
         "email_too_long": "Email powinien zawierać maksymalnie 255 znaków.",
         "email_wrong": "Nieprawidłowy email",
         "email_exist": "Podany email jest juz używany.",
+        "email_do_not_exist": "Podano zły email",
         "password_is_empty": "Hasło nie może być puste.",
         "password_too_short": "Hasło powinno zawierać co najmniej 6 znaki.",
-        "password_too_long": "Hasło powinno zawierać maksymalnie 255 znaków."
+        "password_too_long": "Hasło powinno zawierać maksymalnie 255 znaków.",
+        "invalid_password": "Podano złe hasło",
+        "register": "Zarejestrowano pomyślnie",
+        "login" : "Zalogowano pomyślnie"
+
     }
 }

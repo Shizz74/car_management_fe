@@ -22,10 +22,12 @@ import { RegistrationComponent } from './_components/registration/registration.c
 import { UserPageComponent } from './_components/user-page/user-page.component';
 import { FooterComponent } from './_components/footer/footer.component';
 import { AlertComponent } from './_components/alert/alert.component';
+import { MyVehicleComponent } from './_components/vehicle/my-vehicle/my-vehicle.component';
+import { DoneTasksComponent } from './_components/task-list/done-tasks/done-tasks.component'
 
 import { JwtInterceptor } from './_helpers/jwt.interceptor'
 import { ErrorInterceptor } from './_helpers/error.intercepotr';
-import { MainNavigationComponent } from './_components/main-navigation/main-navigation.component'
+import { MainNavigationComponent } from './_components/main-navigation/main-navigation.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -41,7 +43,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     UserPageComponent,
     FooterComponent,
     AlertComponent,
-    MainNavigationComponent
+    MainNavigationComponent,
+    MyVehicleComponent,
+    DoneTasksComponent
   ],
   imports: [
     BrowserModule,

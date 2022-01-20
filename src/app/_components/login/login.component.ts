@@ -37,7 +37,17 @@ export class LoginComponent implements OnInit {
       .subscribe(
         res => {
           this.alertService.success('login')
-          this.route.navigate(['/registration']);
+          console.log(res.user.vehicle);
+          let vehicleNumber = res.user.vehicle;
+          vehicleNumber = vehicleNumber.length;
+          console.log(vehicleNumber);
+
+          if (vehicleNumber <= 0 ) {
+            this.route.navigate(['/vehicle/my-vehicle']);
+          } else {
+            this.route.navigate(['/task-list/task-done']);
+          }
+          
         },
         error => {
           this.alertService.error(error);
